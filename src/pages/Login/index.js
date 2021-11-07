@@ -1,14 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { Button, Input,Form } from 'antd';
 import {  EyeInvisibleOutlined, EyeTwoTone  } from '@ant-design/icons';
+import { testApi } from '@/api/request.js'
 import '../../assets/css/login.css'
 
 function Login() {
     const [ form,setForm ] = useState({
         status:0,
         username: 'xiaohei',
-        password: '123456'
+        password: '123456',
+        title: ''
     });
+    useEffect(() => {
+        testApi({id:123}).then(res=>{
+            console.log(res)
+            setForm((form)=>({
+                ...form,
+                title: res.data.title
+            }))
+        })
+    }, [])
     // 调登录接口
     function sendInfo() {
         // 判断是否有信息遗漏
@@ -39,6 +50,7 @@ function Login() {
             }}
             autoComplete="off"
         >
+            {form.title}
             <Form.Item
                 label="账号名："
                 rules={[
