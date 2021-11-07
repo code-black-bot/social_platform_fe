@@ -2,7 +2,7 @@
 宣传部内部社区app，练手用
 
 ## 预定技术栈
-前端：react+redux
+前端：react+react-router-dom+axios+redux
 后端：koa+mysql
 
 ## 启动方法
