@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import Home from './pages/Home'
+import 'antd/dist/antd.css';
 import reportWebVitals from './reportWebVitals';
+import Router from './routes'
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <Home />
+    <Router />
   </React.StrictMode>,
   document.getElementById('root')
 );

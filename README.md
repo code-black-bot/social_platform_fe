@@ -5,6 +5,10 @@
 前端：react+redux
 后端：koa+mysql
 
+## 启动方法
+npm run start
+本地访问页面：127.0.0.1:3005
+
 ## 预期项目目录
 目录说明
 │ .babelrc #babel配置文件
@@ -56,6 +60,6 @@
 │ counter.js
 │ userInfo.js
 │
-└─router #路由文件
+└─routes #路由文件
 Bundle.js
 router.js
